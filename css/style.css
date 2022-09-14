@@ -1,9 +1,34 @@
+/*
+ *
+ * @author Alan Soares
+ *
+ * Github: https://github.com/soares-alan/soares-alan
+ * 
+ * Linkedin : https://www.linkedin.com/in/soares-alan/
+ */
+
+/*
+
+*/
+
+/*
+Porque usar REM como parâmetro de fonte ?
+ Acessibilidade e controle do layout,pois nesse projeto queremos que os espaços acompanhem a ampliação ou redução
+ da fonte em cada medida. Diferente do px no qual usamos para manter medidas "fixas".
+*/
+
+
+
 body {
     margin: 0;
+    /* */
+     font-style:sans-serif;;
     display: flex;
+    /* elemento a baixo do h2 */
     flex-direction: column;
     align-items: center;
     height: 100vh;
+    /* itens ao redor do centro*/
     justify-content: center;
     background-image: url(../img/bg.jpg);
     background-size: cover;
@@ -16,12 +41,55 @@ h2 {
     /* espaçamento entre letras */
     letter-spacing: 0.25rem;
     /* tamanho fonte */
-    font-size: 1,50rem;
-    /* centralização: centro */
+    font-size: 1, 50rem;
+    /* centralização de texto*/
     text-align: center;
 }
 
 .clock {
-    /* flex - direction */
+    /* flex - direction (Lado a lado) */
+    display: flex
+}
+
+/* margem/espaçamento entre os conteudos da <div class="clock"> hous/min/sec/ampm */
+.clock div {
+    margin: 0.313rem
+}
+
+/* edições da class=clock <span>  */
+.clock span {
+    /* largura */
+    width: 6.25rem;
+    /* altura */
+    height: 5rem;
+    /* cor de fundo */
+    background-color: rgb(91, 179, 24);
+    /* opacidade */
+    opacity: .8;
+    /* cor da letra/numero */
+    color: white;
+    /* container flexivel */
     display: flex;
+    /* justificando conteúdo para o centro/horizontal */
+    justify-content: center;
+    /* alinhando o conteúdo para o centro/verticalmente */
+    align-items: center;
+    /* tamanho da fonte Hrs/Min/Sec e AM/PM */
+    font-size: 3.125rem;
+    /* efeito de sombra / rgba define o efeito de opacidade */
+    text-shadow: 2px 2px 4px  rgba(0, 0, 0, 0.3);
+}
+
+/* edições da class="text" */
+.clock .text {
+    /* altura */
+    height: 1.875rem;
+    /* tamanho da fonte */
+    font-size: 0.625rem;
+    /* capitalização de texto: maiúscula. */
+    text-transform: uppercase;
+    /* espaçamento entre as letras */
+    letter-spacing: 0.125rem;
+    
+ 
 }
